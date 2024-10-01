@@ -5,8 +5,9 @@ from typing import Optional
 from .stock import Stock  # Import only for type checking
 
 class Hand(list):
-    def __init__(self):
+    def __init__(self, name: str):
         super().__init__()
+        self.name = name
         self.stock = None  # We first set this variable after putting down a stock
 
     def pickup_cards(self, cards: list[Card]) -> None:
